@@ -7,7 +7,7 @@ touch $TODAYS_TEMPLATE_PATH
 cat $INIT_TEMPLATE_PATH >> $TODAYS_TEMPLATE_PATH
 REPO_PATH="/home/dsillman2000/autogit"
 COMMIT_TIMES=()
-NUM_COMMITS=3
+NUM_COMMITS=$((2 + $RANDOM % 5))
 
 for i in $(seq 1 1 $NUM_COMMITS); do
 
