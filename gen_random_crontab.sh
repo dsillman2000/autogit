@@ -1,6 +1,8 @@
 START_TIME="$(date +%Y%m%d%H%M%S)"
 INIT_TEMPLATE_PATH="/home/dsillman2000/crontab-copy"
 TODAYS_TEMPLATE_PATH="$INIT_TEMPLATE_PATH-$START_TIME"
+# clean up old template paths
+rm -r /home/dsillman2000/crontab-copy-*
 touch $TODAYS_TEMPLATE_PATH
 REPO_PATH="/home/dsillman2000/autogit"
 COMMIT_TIMES=()
@@ -23,5 +25,4 @@ for i in $(seq 1 1 $NUM_COMMITS); do
 
 done
 
-cat "$TODAYS_TEMPLATE_PATH"
-# crontab $TODAYS_TEMPLATE_PATH
+crontab $TODAYS_TEMPLATE_PATH
