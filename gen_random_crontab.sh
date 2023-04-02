@@ -4,6 +4,7 @@ TODAYS_TEMPLATE_PATH="$INIT_TEMPLATE_PATH-$START_TIME"
 # clean up old template paths
 rm -r /home/dsillman2000/crontab-copy-*
 touch $TODAYS_TEMPLATE_PATH
+cat $INIT_TEMPLATE_PATH >> $TODAYS_TEMPLATE_PATH
 REPO_PATH="/home/dsillman2000/autogit"
 COMMIT_TIMES=()
 NUM_COMMITS=3
