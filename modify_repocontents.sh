@@ -34,6 +34,8 @@ for i in $(seq 1 1 $NUM_ACTIONS); do
 
 done
 
+git fetch
+git pull
 git add ./repocontents
 git commit -m "$1"
 git push
