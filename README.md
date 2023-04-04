@@ -2,7 +2,7 @@
 
 This project uses an automated sequence of shell scripts, orchestrated by `cron`, to periodically commit random data to this repository. 
 
-The sole purpose of this project is to artificially boost my GitHub calendar activity.
+The sole purpose of this project is to artificially boost my GitHub "contribution graph" activity.
 
 `gen_random_crontab.sh` builds a random schedule of git commits at midnight each day.
 
