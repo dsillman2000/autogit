@@ -11,7 +11,7 @@ NUM_COMMITS=$((2 + $RANDOM % 5))
 
 for i in $(seq 1 1 $NUM_COMMITS); do
 
-    HOUR=$(( $RANDOM % 24 ))
+    HOUR=$(( ($RANDOM % 23) + 1 ))
     COMMIT_MSG="$(date +%s)$(( $RANDOM * $RANDOM ))"
     
     while [[ " ${COMMIT_TIMES[*]} " =~ " ${HOUR} " ]]; do
